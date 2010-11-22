@@ -1,0 +1,25 @@
+jQuery plugin.
+
+A silly little ditty that basically sits some 
+classes onto an element depending on the 
+time of day.
+
+Basic use ..
+
+$('body').chronoClass();
+
+You can enable days of week, and period of day ..
+
+$('body').chronoClass({
+   dayOfWeek:true,
+   timeOfDay:false
+});
+ 
+Read the code if you need more info, 
+or tell me what you wanna know and 
+I'll write it here you swine.
+
+Seen on http://gofreerange.com/blog
+
+I'd like to thank The Smiths 
+for musical accompaniment whilst I wrote it, yeah?
