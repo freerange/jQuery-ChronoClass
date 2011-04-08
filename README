@@ -14,6 +14,14 @@ $('body').chronoClass({
    dayOfWeek:true,
    timeOfDay:false
 });
+
+If it is friday afternoon it will do the following 
+if you have true set to the options above ..
+
+<body class="fri afternoon"></body>
+
+You can then make it look like a sexy beer
+ garden or whatever your ill be.
  
 Read the code if you need more info, 
 or tell me what you wanna know and 
