@@ -1,35 +1,35 @@
 /*
  * jQuery ChronoClass Plugin
  * Written by Jase jase@gofreerange.com
- * License: Who cares etc. 
+ * License: Who cares etc.
  *
- * This silly little ditty basically sits some 
- * classes onto an element depending on the 
+ * This silly little ditty basically sits some
+ * classes onto an element depending on the
  * time of day.
- * 
+ *
  * Basic use ..
- * 
+ *
  * $('body').chronoClass();
- * 
+ *
  * You can enable days of week, and period of day ..
- * 
+ *
  * $('body').chronoClass({
  *    dayOfWeek:true,
  *    timeOfDay:false
  * });
- *  
- * Read the code if you need more info, 
- * or tell me what you wanna know and 
+ *
+ * Read the code if you need more info,
+ * or tell me what you wanna know and
  * I'll write it here you swine.
- * 
+ *
  * Seen on http://gofreerange.com/blog
- * 
- * I'd like to thank The Smiths 
+ *
+ * I'd like to thank The Smiths
  * for musical accompaniment whilst I wrote it, yeah?
 */
 
 ;(function($) {
-  
+
   Date.hourToPeriod = function (date) {
     if (!date) { date = new Date() };
     var period;
@@ -43,7 +43,7 @@
     };
     return period;
   }
-  
+
   // What does the chronoClass plugin do?
   $.fn.chronoClass = function(options) {
     var opts = $.extend({}, $.fn.chronoClass.defaults, options);
@@ -55,12 +55,12 @@
       var o = $.meta ? $.extend({}, opts, $this.data()) : opts;
 
       var now = new Date();
-      
+
       if (o.dayOfWeek) {
         var dayNames = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
         $this.addClass(dayNames[now.getDay()-1]);
       };
-      
+
       if (o.timeOfDay) {
         $this.addClass(Date.hourToPeriod(now));
       };
