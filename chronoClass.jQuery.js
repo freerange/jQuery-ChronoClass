@@ -57,8 +57,8 @@
       var now = new Date();
 
       if (o.dayOfWeek) {
-        var dayNames = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
-        $this.addClass(dayNames[now.getDay()-1]);
+        var dayNames = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+        $this.addClass(dayNames[now.getDay()]);
       };
 
       if (o.timeOfDay) {
